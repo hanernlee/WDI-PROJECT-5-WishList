@@ -24,7 +24,8 @@ function watch() {
   gulp.watch('./scss/**/*.scss', function() {
     runSync('sass', 'refresh');
   });
-  gulp.watch('./index.html').on('change', plugin.server.reload);
+  gulp.watch('./views/home.ejs').on('change', plugin.server.reload);
+  gulp.watch('./views/index.ejs').on('change', plugin.server.reload);
 }
 
 function serve() {

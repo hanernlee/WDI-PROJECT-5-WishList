@@ -1,0 +1,36 @@
+<% include partials/header.ejs %>
+
+<h1>Hello <%= user.username%>,</h1>
+
+  <a href ="/logout" class="waves-effect waves-light btn">Logout</a>
+  <a href="/about">Home</a>
+
+
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Add Item</a>
+
+ <!-- Modal Structure -->
+ <div id="modal1" class="modal bottom-sheet">
+   <div class="modal-content">
+     <h4>Add Item</h4>
+       <form action="/add" method="post">
+         <span>Start Date: <input type="text" id="datepickerone" name="date"></span>
+
+         <span>Purchase Date: <input type="text" id="datepickertwo" name="date"></span>
+
+         <label for="">Price</label>
+         <input type="text" id="item-price">
+
+         <label for="">Item Name</label>
+         <input type="text" id="item-name">
+
+         <label for="">Image Url</label>
+         <input type="text" id="item-image">
+   </div>
+   <div class="modal-footer">
+     <button id="add-btn" class="modal-action modal-close waves-effect waves-green btn-flat">Add</button>
+   </form>
+   </div>
+ </div>
+
+
+<% include partials/footer.ejs %>

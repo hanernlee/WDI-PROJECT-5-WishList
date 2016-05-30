@@ -1,0 +1,23 @@
+<% include partials/header.ejs %>
+
+  <form action="/new" method="post">
+    <label for="">Username</label>
+    <input type="text" name="username">
+    <label for="">Email</label>
+    <input type="text" name="email">
+    <label for="">Password</label>
+    <input type="password" name="password">
+    <button class="waves-effect waves-light btn">Submit</button>
+  </form>
+
+  <form action="/login" method="post">
+    <label for="">Email</label>
+    <input type="email" name="email">
+    <label for="">Password</label>
+    <input type="password" name="password">
+    <button class="waves-effect waves-light btn">Login</button>
+  </form>
+
+
+
+<% include partials/footer.ejs %>
