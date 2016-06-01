@@ -48,13 +48,14 @@ input[type=text].valid, input[type=email].valid, input[type=password].valid {
   color: white; }
 
 body {
-  background-color: #e3f2fd;
-  color: white; }
+  color: white;
+  background-color: #e3f2fd; }
 
 .bg {
-  height: 100vh;
   background: -webkit-linear-gradient(top left, #401240, #49c29c);
-  background: linear-gradient(to bottom right, #401240, #49c29c); }
+  background: linear-gradient(to bottom right, #401240, #49c29c);
+  height: auto;
+  min-height: 100vh; }
 
 .nav-wrapper {
   background-color: #401240; }
@@ -71,8 +72,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  .logins .modal-content {
+    color: white; }
   .logins form {
-    background-color: rgba(0, 0, 0, 0.2); }
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white; }
   .logins .modal {
     background-color: transparent; }
   .logins .input-field label {
@@ -142,8 +146,10 @@ body {
   #faq-list li {
     margin-bottom: 1em; }
 
-.modal-content h2 {
-  margin-bottom: 1em; }
+.modal-content {
+  color: black; }
+  .modal-content h2 {
+    margin-bottom: 1em; }
 
 .modal {
   max-height: 100% !important; }
@@ -209,6 +215,7 @@ body {
   color: black; }
 
 #unique-item {
+  margin: 0;
   color: black; }
   #unique-item img {
     height: 10em;
@@ -243,6 +250,20 @@ body {
 
 .done-btn {
   background-color: #49c29c; }
+
+@media screen and (device-aspect-ratio: 375 / 667) {
+  .modal {
+    max-height: 90% !important; }
+  .fixed-action-btn {
+    position: relative;
+    bottom: 16px; } }
+
+@media screen and (device-aspect-ratio: 40 / 71) {
+  .modal {
+    max-height: 90% !important; }
+  .fixed-action-btn {
+    position: relative;
+    bottom: 16px; } }
 
 @media screen and (min-width: 767px) {
   .item-list {

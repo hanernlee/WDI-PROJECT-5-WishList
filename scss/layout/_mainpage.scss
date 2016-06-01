@@ -1,14 +1,12 @@
 body {
-  background-color: $baby-blue ;
   color:white;
+  background-color: $baby-blue;
 }
 
 .bg {
-  height:100vh;
-  // background: -webkit-linear-gradient(left top, $teal-light, $baby-blue); /* For Safari 5.1 to 6.0 */
-  // background: -o-linear-gradient(bottom right,blue, $baby-blue); /* For Opera 11.1 to 12.0 */
-  // background: -moz-linear-gradient(bottom right, blue, $baby-blue); /* For Firefox 3.6 to 15 */
   background: linear-gradient(to bottom right, $purple, $teal-light);
+  height:auto;
+  min-height:100vh;
 }
 
 .nav-wrapper {
@@ -22,8 +20,13 @@ body {
   align-items: center;
   justify-content: center;
 
+  .modal-content {
+    color:white;
+  }
+
   form {
     background-color:rgba(0,0,0,0.2);
+    color:white;
   }
 
   .modal {
@@ -118,6 +121,7 @@ body {
 }
 
 .modal-content {
+  color:black;
   h2 {
     margin-bottom:1em;
   }
@@ -208,6 +212,7 @@ body {
 }
 
 #unique-item {
+  margin:0;
   color:black;
   img {
       height: 10em;
@@ -265,6 +270,34 @@ body {
   background-color:$teal-light;
 }
 
+//iphone 6
+@media screen and (device-aspect-ratio: 375/667) {
+
+  .modal {
+    max-height: 90% !important;
+  }
+
+  .fixed-action-btn {
+    position: relative;
+    bottom:16px;
+  }
+}
+
+//iphone 5
+@media screen and (device-aspect-ratio: 40/71) {
+
+  .modal {
+    max-height: 90% !important;
+  }
+
+  .fixed-action-btn {
+    position: relative;
+    bottom:16px;
+  }
+
+}
+
+//desktop view
 @media screen and (min-width: 767px) {
 
   .item-list {
