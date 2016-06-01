@@ -13,7 +13,7 @@ var mongoURL = "mongodb://localhost:27017/smartbuy";
 var MongoDB = mongoose.connect(mongoURL).connection;
 
 var app = express();
-var PORT = process.env.PORT || 4567;
+var PORT = process.env.PORT || 3000;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -56,7 +56,6 @@ function requireLogin (req, res, next) {
   }
 };
 
-
 // Routes for Each Page
 app.get('/', function(req, res){
   res.render('index', { layout: 'index' })
@@ -73,8 +72,24 @@ app.post('/new', function(req, res){
     if (err) {
       res.send("Failed Registration");
     } else {
-      req.session.user = user;
-      res.redirect('/home');
+      User.findOne({ email: req.body.email }, function(err, user) {
+        if (err) throw err;
+
+        if(req.body.password !== "" || req.body.email !== "") {
+          user.comparePassword(req.body.password, function(err, isMatch)
+            {
+              if (isMatch) {
+                req.session.user = user;
+                res.redirect('/home');
+              } else {
+                res.send("Failed Login Attempt, please try again!");
+              }
+          });
+        } else {
+          res.send("Please enter a password or email");
+        }
+
+      });
     }
   });
 });
@@ -102,7 +117,15 @@ app.post('/login', function(req, res) {
 
 //about
 app.get('/home', requireLogin, function(req, res){
-  res.render('home', {layout:'home.ejs'});
+  Item.find({ user_id: req.user.username}, function(err, items) {
+    var itemMap = {};
+
+    items.forEach(function(item) {
+      itemMap[item._id] = item;
+    });
+
+    res.render('home', {layout:'home.ejs', items:items});
+  });
 });
 
 app.get('/logout', function(req, res) {
@@ -117,19 +140,59 @@ app.post('/add', function(req, res) {
     name: req.body.name,
     imageUrl: req.body.img,
     price: req.body.price,
+    start: req.body.start,
+    end: req.body.end,
+    status: 'incomplete',
     duration: req.body.duration
   });
+  console.log(item);
+  console.log('hello');
 
   item.save(function (err) {
     if (err) {
-      res.send("Failed Saving Item");
+      console.log(err);
+      console.log('fail');
     } else {
-      res.redirect('/home');
+      res.json({item});
     }
   });
-
-
 });
+
+app.delete('/delete/:itemId', function(req,res) {
+  console.log(req.params.itemId);
+  Item.findOneAndRemove({ _id: req.params.itemId }, function(err, item) {
+    if (err) {
+      throw err;
+    } else {
+      console.log('User deleted');
+      res.json({item});
+    }
+  });
+});
+
+app.post('/update/:divId', function(req,res) {
+  Item.findOneAndUpdate({ _id: req.params.divId}, {$set:{status: "completed"}}, {new: true}, function (err,item) {
+    if (err) {
+      throw err;
+    } else {
+      res.json({item});
+    }
+  });
+});
+
+app.post('/reverse/:currentId', function(req,res) {
+  console.log(req.params.currentId);
+  Item.findOneAndUpdate({ _id: req.params.currentId}, {$set:{status: "incomplete"}}, {new: true}, function (err,item) {
+    if (err) {
+      throw err;
+    } else {
+      res.json({item});
+    }
+  });
+});
+
+
+
 
 
 var server = require('http').createServer(app);

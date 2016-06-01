@@ -14,7 +14,7 @@ gulp.task('lint', lint);
 gulp.task('serve', serve);
 gulp.task('refresh', refresh);
 gulp.task('watch', watch);
-gulp.task('default', ['serve', 'watch']);
+gulp.task('default', ['watch']);
 
 function refresh() {
   plugin.server.stream();
@@ -25,11 +25,13 @@ function watch() {
     runSync('sass', 'refresh');
   });
   gulp.watch('./views/home.ejs').on('change', plugin.server.reload);
+  gulp.watch('./views/_items.ejs').on('change', plugin.server.reload);
   gulp.watch('./views/index.ejs').on('change', plugin.server.reload);
 }
 
 function serve() {
   plugin.server.init({
+    port: 3000,
     server: './'
   });
 }
@@ -37,9 +39,13 @@ function serve() {
 function sass() {
   gulp.src('./scss/main.scss')
   .pipe( plugin.sass() )
+  .on('error', function(error) {
+    console.log(error);
+    this.end();
+  })
   .pipe( plugin.autoprefixer() )
   .pipe( plugin.rename('bundle.css') )
-  .pipe( gulp.dest('bundle') )
+  .pipe( gulp.dest('public/bundle') )
   .pipe( plugin.server.stream() );
 }
 

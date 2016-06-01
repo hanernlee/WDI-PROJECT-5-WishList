@@ -1,0 +1,41 @@
+<script id="item-template" type="text/x-handlebars-template">
+
+<div class="item-div" id="{{itemId}}">
+  <div class="bubble col s4 m4 l4 center-align"><a href="#modal{{itemId}}" class= "item-icon z-depth-5 btn-floating btn-large modal-trigger waves-effect waves-light white"><img src="{{itemImg}}"></a>
+  <div>{{itemName}}</div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal{{itemId}}" class="modal">
+    <div class="modal-content item-list">
+      <a id="close-btn" class="modal-action modal-close"><i class="material-icons">clear</i></a>
+      <ul>
+        <li><img class="responsive-img" src="{{itemImg}}"></li>
+        <li><h4>{{itemName}}</h4></li>
+        <li>Price: ${{itemPrice}}</li>
+        <li>Created Date: {{itemStart}}</li>
+        <li>Desired Date: {{itemEnd}}</li>
+        <li class="price-list"> You will need to save <span class="price-amount">${{itemSave}}</span> a day starting from the Created Date to be able to purchase {{itemName}}</li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 15px; right: 24px;">
+       <a class="menu-icon btn-floating btn-large">
+         <i class="material-icons">menu</i>
+       </a>
+       <ul>
+         <li><a class="done-btn modal-action modal-close btn-floating"><i class="material-icons">done</i></a></li>
+          <li><a class="redo-btn modal-action modal-close btn-floating light-blue lighten-3"><i class="material-icons">autorenew</i></a></li>
+          <li>
+            <form action="/delete/{{itemId}}" method="post">
+               <input type="hidden" value="delete" name="_method"><button class="delete-btn modal-action modal-close btn-floating red darken-4"><i class="material-icons">delete</i></button>
+            </form>
+          </li>
+       </ul>
+     </div>
+    </div>
+  </div>
+</div>
+
+
+</script>

@@ -1,0 +1,44 @@
+<% items.forEach(function(uniqueItem) { %>
+
+<div class="item-div" id="<%=uniqueItem._id%>">
+  <% if (uniqueItem.status === "incomplete") {%>
+    <div class="bubble col s4 m4 l4 center-align"><a href="#modal<%=uniqueItem._id%>" class="item-icon z-depth-5 btn-floating btn-large modal-trigger waves-effect waves-light white"><img src="<%= uniqueItem.imageUrl %>"></a>
+  <% } else { %>
+    <div class="bubble col s4 m4 l4 center-align"><a href="#modal<%=uniqueItem._id%>" class="done-color item-icon z-depth-5 btn-floating btn-large modal-trigger waves-effect waves-light white"><i class="done-tick material-icons">done</i><img src="<%= uniqueItem.imageUrl %>"></a>
+  <% } %>
+
+  <div><%= uniqueItem.name %></div>
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal<%=uniqueItem._id%>" class="modal">
+    <div class="modal-content item-list">
+      <a id="close-btn" class="modal-action modal-close"><i class="material-icons">clear</i></a>
+      <ul>
+        <li><img class="responsive-img" src="<%= uniqueItem.imageUrl %>"></li>
+        <li><h4><%= uniqueItem.name %></h4></li>
+        <li>Price: $<%= uniqueItem.price %></li>
+        <li>Created Date: <%= uniqueItem.start.slice(0,15)%></li>
+        <li>Desired Date: <%= uniqueItem.end.slice(0,15)%></li>
+        <li class="price-list"> You will need to save <span class="price-amount">$<%= (uniqueItem.price/uniqueItem.duration).toFixed(2) %> </span> a day starting from the Created Date to be able to purchase <%= uniqueItem.name%></li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <div class="fixed-action-btn horizontal click-to-toggle" style="bottom: 15px; right: 24px;">
+       <a class="menu-icon btn-floating btn-large">
+         <i class="material-icons">menu</i>
+       </a>
+       <ul>
+         <li><a class="done-btn modal-action modal-close btn-floating"><i class="material-icons">done</i></a></li>
+         <li><a class="redo-btn modal-action modal-close btn-floating light-blue lighten-3"><i class="material-icons">autorenew</i></a></li>
+         <li>
+          <form action="/delete/<%=uniqueItem._id%>" method="post">
+             <input type="hidden" value="delete" name="_method"><button class="delete-btn modal-action modal-close btn-floating red darken-4"><i class="material-icons">delete</i></button>
+          </form>
+        </li>
+       </ul>
+     </div>
+    </div>
+  </div>
+</div>
+<%});%>

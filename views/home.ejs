@@ -1,36 +1,89 @@
 <% include partials/header.ejs %>
 
-<h1>Hello <%= user.username%>,</h1>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">wi$hList</a>
+    <a id="faq" class="waves-effect waves-light btn modal-trigger" href="#modal3"><i class="material-icons">assignment_ind</i></a>
+    <a id="logout" href ="/logout" class="waves-effect waves-light btn"><i class="material-icons">exit_to_app</i></a>
+  </div>
+</nav>
 
-  <a href ="/logout" class="waves-effect waves-light btn">Logout</a>
-  <a href="/about">Home</a>
+<div id="guide">
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+       <a class="close-btn-two modal-action modal-close"><i class="material-icons">clear</i></a>
+      <ul id="faq-list">
+        <li><h2>Hello <span class="user-name"><%= user.username %></span>,</h2></li>
+        <li>Welcome to <span class="wish-title">wi$hList</span>, a smart budgeting tool that calculates how much you need to save a day to be able to buy a desired item</li>
+        <li>1. Begin by adding a new item. You will need to pick a start date and a desired date for the added item</li>
+        <li>2. Tap on the newly added item on your wi$hList and you will be provided with the amount needed to save each day to afford that item</li>
+        <li>3. Once you have successfully purchased an item you can mark it as done by selecting <a class="btn-floating green"><i class="material-icons">done</i></a></li>
+        <li>4. You can undo this action by selecting <a class="btn-floating light-blue lighten-3"><i class="material-icons">autorenew</i></a> </li>
+        <li>5. You can also choose to delete any item by selecting <a class="btn-floating red"><i class="material-icons">delete</i></a> </li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat"><span class="agree">GET STARTED</span></a>
+    </div>
+  </div>
+</div>
 
-
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Add Item</a>
-
+<div class="container-one">
  <!-- Modal Structure -->
- <div id="modal1" class="modal bottom-sheet">
-   <div class="modal-content">
-     <h4>Add Item</h4>
-       <form action="/add" method="post">
-         <span>Start Date: <input type="text" id="datepickerone" name="date"></span>
+   <div id="modal1" class="modal bottom-sheet">
+     <div class="modal-content">
+         <a class="close-btn-two modal-action modal-close"><i class="material-icons">clear</i></a>
+       <h2>Add Item</h2>
+         <form action="/add" method="post">
 
-         <span>Purchase Date: <input type="text" id="datepickertwo" name="date"></span>
+          <div class="input-field col s6">
+            <label for="datepickerone">Created Date</label>
+            <input required="" aria-required="true" class="validate" type="text" id="datepickerone" name="date">
+          </div>
 
-         <label for="">Price</label>
-         <input type="text" id="item-price">
+          <div class="input-field col s6">
+             <label for="datepickertwo">Desired Purchase Date</label>
+             <input required="" aria-required="true" class="validate" type="text" id="datepickertwo" name="date">
+          </div>
 
-         <label for="">Item Name</label>
-         <input type="text" id="item-name">
+          <div class="input-field col s6">
+             <label for="item-price">Price</label>
+             <input required="" aria-required="true" class="validate" type="text" id="item-price">
+          </div>
 
-         <label for="">Image Url</label>
-         <input type="text" id="item-image">
+          <div class="input-field col s6">
+             <label for="item-image">Item Name</label>
+             <input required="" aria-required="true" class="validate" type="text" id="item-name">
+          </div>
+
+
+          <div class="input-field col s6">
+             <label for="">Image Url</label>
+             <input required="" aria-required="true" class="validate" type="text" id="item-image">
+          </div>
+
+     </div>
+     <div class="modal-footer">
+       <button id="add-btn" class="modal-action modal-close waves-effect waves-green btn-flat"><span class="agree">Add</span></button>
+     </form>
+     </div>
    </div>
-   <div class="modal-footer">
-     <button id="add-btn" class="modal-action modal-close waves-effect waves-green btn-flat">Add</button>
-   </form>
-   </div>
- </div>
+</div>
+
+<div class="container-two">
+  <div id="unique-item" class="row">
+
+    <div class="bubble col s4 m4 l4 center-align"><a href="#modal1" class="z-depth-5 adding modal-trigger btn-floating btn-large waves-effect waves-light"><i id="add" class="material-icons">add</i></a>
+    <div></div>
+    </div>
+
+<% if (items.length !== 0) { %>
+
+  <% include _items.ejs %>
+  </div>
+</div>
+<% } %>
 
 
+<% include _handlebars.ejs%>
 <% include partials/footer.ejs %>
