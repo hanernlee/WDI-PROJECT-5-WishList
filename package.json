@@ -10,7 +10,7 @@
     "sass": "gulp sass",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "CL",
+  "author": "CL", 
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.12.8",
