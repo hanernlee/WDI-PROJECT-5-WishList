@@ -18,9 +18,9 @@
         <li><img class="responsive-img" src="<%= uniqueItem.imageUrl %>"></li>
         <li><h4><%= uniqueItem.name %></h4></li>
         <li>Price: $<%= uniqueItem.price %></li>
-        <li>Created Date: <%= uniqueItem.start.slice(0,15)%></li>
+        <li>Entry Date: <%= uniqueItem.start.slice(0,15)%></li>
         <li>Desired Date: <%= uniqueItem.end.slice(0,15)%></li>
-        <li class="price-list"> You will need to save <span class="price-amount">$<%= (uniqueItem.price/uniqueItem.duration).toFixed(2) %> </span> a day starting from the Created Date to be able to purchase <%= uniqueItem.name%></li>
+        <li class="price-list"> You will need to save <span class="price-amount">$<%= (uniqueItem.price/uniqueItem.duration).toFixed(2) %> </span> a day starting from <%= uniqueItem.start.slice(0,15)%> to be able to purchase <%= uniqueItem.name%> on <%= uniqueItem.end.slice(0,15)%></li>
       </ul>
     </div>
     <div class="modal-footer">

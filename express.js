@@ -13,8 +13,9 @@ var mongoURL = "mongodb://localhost:27017/smartbuy";
 var MongoDB = mongoose.connect(mongoURL).connection;
 
 var app = express();
-var PORT = process.env.PORT || 3000;
+var port = process.env.PORT || 3000;
 
+app.set('port', port);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -192,10 +193,7 @@ app.post('/reverse/:currentId', function(req,res) {
 });
 
 
-
-
-
-var server = require('http').createServer(app);
-server.listen(PORT, function() {
-  console.log('Listening on port ' + PORT)
-});
+// var server = require('http').createServer(app);
+// server.listen(port, function() {
+//   console.log('Listening on port ' + port)
+// });

@@ -29,6 +29,8 @@ $(document).ready(function(){
         }
     });
 
+  $('select').material_select();
+
   $('nav').on('click','a', function() {
     $('.modal-trigger').leanModal();
   });
