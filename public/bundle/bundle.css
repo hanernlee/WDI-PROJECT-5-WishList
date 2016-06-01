@@ -91,7 +91,7 @@ body {
             justify-content: center;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    margin: 0 0 3em 1em;
+    margin: 0 0 8em 1em;
     background-color: transparent; }
   .logins #sign-up-form {
     -webkit-box-align: center;
@@ -103,7 +103,7 @@ body {
             justify-content: center;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    margin: 0 1em 3em 0;
+    margin: 0 1em 8em 0;
     background-color: transparent; }
   .logins #center-logo {
     color: white;
@@ -151,9 +151,6 @@ body {
   .modal-content h2 {
     margin-bottom: 1em; }
 
-.modal {
-  max-height: 100% !important; }
-
 .modal-footer .btn-floating.btn-large {
   width: 50.5px;
   height: 50.5px;
@@ -182,6 +179,9 @@ body {
 .container-one h2 {
   color: #e4186e;
   font-weight: bold; }
+
+.container-one .modal {
+  max-height: 100% !important; }
 
 .bubble {
   margin-top: 4em; }
