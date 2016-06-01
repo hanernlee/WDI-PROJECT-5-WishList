@@ -270,4 +270,6 @@ body {
     text-align: center; }
     .item-list img.responsive-img, .item-list video.responsive-video {
       max-width: 50%;
-      height: auto; } }
+      height: auto; }
+  #logout {
+    top: 23%; } }

@@ -208,3 +208,11 @@ var server = require('http').createServer(app);
 server.listen(port, function() {
   console.log('Listening on port ' + port)
 });
+
+//For package.json
+// "start": "gulp",
+// "tasks": "gulp --tasks",
+// "postinstall": "gulp default",
+// "lint": "gulp lint",
+// "sass": "gulp sass",
+// "test": "echo \"Error: no test specified\" && exit 1"

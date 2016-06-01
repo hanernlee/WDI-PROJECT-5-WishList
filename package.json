@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "this better work"
+    "test": "this better work",
   },
   "author": "CL",
   "license": "ISC",
