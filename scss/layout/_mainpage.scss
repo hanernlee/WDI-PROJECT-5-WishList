@@ -266,6 +266,11 @@ body {
 
 }
 
+.fixed-action-btn {
+  position: relative;
+  bottom:16px;
+}
+
 .done-btn {
   background-color:$teal-light;
 }

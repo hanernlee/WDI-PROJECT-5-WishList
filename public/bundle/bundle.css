@@ -248,6 +248,10 @@ body {
   #unique-item .menu-icon {
     background-color: #e4186e; }
 
+.fixed-action-btn {
+  position: relative;
+  bottom: 16px; }
+
 .done-btn {
   background-color: #49c29c; }
 
