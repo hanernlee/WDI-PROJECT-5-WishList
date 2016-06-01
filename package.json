@@ -5,6 +5,9 @@
   "main": "index.js",
   "author": "CL",
   "license": "ISC",
+  "engines": {
+    "node": "6.1.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.12.8",
     "gulp": "^3.9.1",
@@ -23,8 +26,5 @@
     "body-parser": "^1.15.1",
     "express-ejs-layouts": "^2.1.0",
     "client-sessions": "^0.7.0"
-  },
-  "engines": {
-    "node": "6.1.0"
   },
 }
