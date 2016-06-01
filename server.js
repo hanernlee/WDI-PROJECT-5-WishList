@@ -15,7 +15,7 @@ var mongoose = require('mongoose'),
 var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
                 replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };
 
-var mongoURI = process.env.MONGO;
+var mongoURI = process.env.MONGODB_URI;
 
 var MongoDB = mongoose.connect(mongoURI, options);
 var conn = mongoose.connection;
