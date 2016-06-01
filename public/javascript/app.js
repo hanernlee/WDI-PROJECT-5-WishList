@@ -1,15 +1,10 @@
 $(document).ready(function(){
 
-  var ua = navigator.userAgent.toLowerCase();
-  if (ua.indexOf('safari') != -1) {
-    if (ua.indexOf('chrome') > -1) {
-      $('#login-form').css("margin-bottom","3em");
-      $('#sign-up-form').css("margin-bottom","3em");
-    } else {
-      $('#login-form').css("margin-bottom","8em");
-      $('#sign-up-form').css("margin-bottom","8em");
-    }
+  if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
+    $('#login-form').css("margin-bottom", "6em");
+    $('#sign-up-form').css("margin-bottom","6em");
   }
+
 
   $(function() {
     $( "#datepickerone" ).datepicker({ dateFormat: 'dd-mm-yy', minDate: 0 });
