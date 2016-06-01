@@ -10,12 +10,10 @@ var mongoose = require('mongoose'),
     User = require('./models/user'),
     Item = require('./models/item');
 
-// var mongoURL = "mongodb://localhost:27017/smartbuy";
-
 var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
                 replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };
 
-var mongoURI = process.env.MONGODB_URI;
+var mongoURI = process.env.MONGODB_URI || "mongodb://localhost:27017/smartbuy";
 
 var MongoDB = mongoose.connect(mongoURI, options);
 var conn = mongoose.connection;
@@ -24,12 +22,12 @@ conn.on('error', console.error.bind(console, 'connection error:'));
 
 
 var app = express();
+app.use(favicon(__dirname + '/public/favicon.ico'));
 var port = process.env.PORT || 3000;
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
 app.use(morgan('combined'));
 app.use(express.static('public'));
 app.use(expressLayouts);
