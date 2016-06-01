@@ -1,65 +1,66 @@
 <% include partials/header.ejs %>
 
-<div class="container logins">
+<div class="bg">
+  <div class="container logins">
 
-  <a id="sign-up-form" class="waves-effect waves-light btn-large modal-trigger" href="#modal3"><i class="material-icons left">favorite</i>Sign Up</a>
+    <a id="sign-up-form" class="waves-effect waves-light btn-large modal-trigger" href="#modal3"><i class="material-icons left">favorite</i>Sign Up</a>
 
-  <div id="modal3" class="modal bottom-sheet">
-    <a class="close-btn-three modal-action modal-close"><i class="material-icons">clear</i></a>
-    <form action="/new" method="post">
-     <div class="modal-content">
-       <div class="input-field col s6">
-         <i class="material-icons prefix">favorite</i>
-         <input autocomplete="off" type="text" name="username" placeholder="Username">
+    <div id="modal3" class="modal bottom-sheet">
+      <a class="close-btn-three modal-action modal-close"><i class="material-icons">clear</i></a>
+      <form action="/new" method="post">
+       <div class="modal-content">
+         <div class="input-field col s6">
+           <i class="material-icons prefix">favorite</i>
+           <input autocomplete="off" type="text" name="username" placeholder="Username">
+         </div>
+
+         <div class="input-field col s6">
+           <i class="material-icons prefix">face</i>
+           <input type="text" name="email" placeholder="Email">
+         </div>
+
+         <div class="input-field col s6">
+           <i class="material-icons prefix">vpn_key</i>
+           <input type="password" name="password" palceholder="Password">
+         </div>
+
+         <div class="input-field col s6">
+            <button class="submit-btn waves-effect waves-light btn">Sign Up</button>
+         </div>
        </div>
+       </form>
+   </div>
 
-       <div class="input-field col s6">
-         <i class="material-icons prefix">face</i>
-         <input type="text" name="email" placeholder="Email">
-       </div>
+    <a id="login-form" class="waves-effect waves-light btn-large modal-trigger" href="#modal4"><i class="material-icons left">face</i>Login</a>
 
-       <div class="input-field col s6">
-         <i class="material-icons prefix">vpn_key</i>
-         <input type="password" name="password" palceholder="Password">
-       </div>
+    <div id="modal4" class="modal bottom-sheet">
+      <a class="close-btn-three modal-action modal-close"><i class="material-icons">clear</i></a>
+      <form action="/login" method="post">
+       <div class="modal-content">
+         <div class="input-field col s6">
+           <i class="material-icons prefix">face</i>
+           <input type="email" name="email" placeholder="Email">
+         </div>
 
+         <div class="input-field col s6">
+           <i class="material-icons prefix">vpn_key</i>
+           <input type="password" name="password" placeholder="Password">
+         </div>
        <div class="input-field col s6">
-          <button class="submit-btn waves-effect waves-light btn">Submit</button>
+          <button class="submit-btn waves-effect waves-light btn">Login</button>
        </div>
      </div>
      </form>
- </div>
+   </div>
 
-  <a id="login-form" class="waves-effect waves-light btn-large modal-trigger" href="#modal4"><i class="material-icons left">face</i>Login</a>
+   <div class="col s12 m4 l8">
+     <div id="center-logo">
+        <img class="circle responsive-img" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glowing-green-neon-icons-alphanumeric/110718-glowing-green-neon-icon-alphanumeric-letter-w.png">
+       <h1>EVERYONE'S FAVOURITE WISHLIST</h1>
 
-  <div id="modal4" class="modal bottom-sheet">
-    <a class="close-btn-three modal-action modal-close"><i class="material-icons">clear</i></a>
-    <form action="/login" method="post">
-     <div class="modal-content">
-       <div class="input-field col s6">
-         <i class="material-icons prefix">face</i>
-         <input type="email" name="email" placeholder="Email">
-       </div>
-
-       <div class="input-field col s6">
-         <i class="material-icons prefix">vpn_key</i>
-         <input type="password" name="password" placeholder="Password">
-       </div>
-     <div class="input-field col s6">
-        <button class="submit-btn waves-effect waves-light btn">Login</button>
      </div>
    </div>
-   </form>
- </div>
 
- <div class="col s12 m4 l8">
-   <div id="center-logo">
-      <img class="circle responsive-img" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/glowing-green-neon-icons-alphanumeric/110718-glowing-green-neon-icon-alphanumeric-letter-w.png">
-     <h1>EVERYONE'S FAVOURITE WISHLIST</h1>
-
-   </div>
- </div>
-
+  </div>
 </div>
-
 <% include partials/footer.ejs %>

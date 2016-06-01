@@ -1,9 +1,18 @@
 body {
   background-color: $baby-blue ;
+  color:white;
+}
+
+.bg {
+  height:100vh;
+  // background: -webkit-linear-gradient(left top, $teal-light, $baby-blue); /* For Safari 5.1 to 6.0 */
+  // background: -o-linear-gradient(bottom right,blue, $baby-blue); /* For Opera 11.1 to 12.0 */
+  // background: -moz-linear-gradient(bottom right, blue, $baby-blue); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, $purple, $teal-light);
 }
 
 .nav-wrapper {
-  background-color: $desat-blue;
+  background-color: $purple;
 }
 
 .logins {
@@ -11,11 +20,19 @@ body {
   text-align:center;
   display:flex;
   align-items: center;
- justify-content: center;
+  justify-content: center;
+
+  form {
+    background-color:rgba(0,0,0,0.2);
+  }
+
+  .modal {
+    background-color:rgba(0,0,0,0.0);
+  }
+
   .input-field label {
     top: 0.5rem;
   }
-
 
   #login-form {
     // display: flex;
@@ -23,6 +40,7 @@ body {
     justify-content: center;
     align-self: flex-end;
     margin: 0 0 3em 1em;
+    background-color: rgba(0,0,0,0);
 
   }
 
@@ -32,9 +50,17 @@ body {
     justify-content: center;
     align-self: flex-end;
     margin: 0 1em 3em 0;
+    background-color: rgba(0,0,0,0);
   }
 
   #center-logo {
+    img {
+      border:5px solid white;
+      margin:1em 0 1em 0;
+    }
+
+    color:white;
+
     position:absolute;
     top:40%;
     left:50%;
@@ -43,6 +69,7 @@ body {
 
   .submit-btn {
     margin-bottom:1.5em;
+    background-color: $hot-pink;
   }
 
 }
@@ -114,10 +141,19 @@ body {
   font-weight:bold;
 }
 
+.item-name-list {
+  color:white;
+  font-weight:bold;
+}
+
+.btn-floating:hover {
+    background-color: #b39ddb;
+}
+
 .adding {
   border-style:dashed;
-  border-color: $desat-blue;
-  background-color:$teal-light;
+  border-color: $hot-pink;
+  background-color:rgba(0,0,0,0);
   i {
     color:white;
     padding:0.3em 0.1em 0 0;
@@ -167,7 +203,12 @@ body {
   color:$teal-light;
 }
 
+#modal3 {
+  color:black;
+}
+
 #unique-item {
+  color:black;
   img {
       height: 10em;
       width:15em;

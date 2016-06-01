@@ -44,11 +44,20 @@ input[type=text].valid, input[type=email].valid, input[type=password].valid {
 .logins .input-field .prefix.active {
   color: #e4186e; }
 
+.logins .input-field .prefix {
+  color: white; }
+
 body {
-  background-color: #e3f2fd; }
+  background-color: #e3f2fd;
+  color: white; }
+
+.bg {
+  height: 100vh;
+  background: -webkit-linear-gradient(top left, #401240, #49c29c);
+  background: linear-gradient(to bottom right, #401240, #49c29c); }
 
 .nav-wrapper {
-  background-color: #2d333a; }
+  background-color: #401240; }
 
 .logins {
   height: 100vh;
@@ -62,6 +71,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  .logins form {
+    background-color: rgba(0, 0, 0, 0.2); }
+  .logins .modal {
+    background-color: transparent; }
   .logins .input-field label {
     top: 0.5rem; }
   .logins #login-form {
@@ -74,7 +87,8 @@ body {
             justify-content: center;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    margin: 0 0 3em 1em; }
+    margin: 0 0 3em 1em;
+    background-color: transparent; }
   .logins #sign-up-form {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -85,15 +99,21 @@ body {
             justify-content: center;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    margin: 0 1em 3em 0; }
+    margin: 0 1em 3em 0;
+    background-color: transparent; }
   .logins #center-logo {
+    color: white;
     position: absolute;
     top: 40%;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%);
             transform: translateX(-50%) translateY(-50%); }
+    .logins #center-logo img {
+      border: 5px solid white;
+      margin: 1em 0 1em 0; }
   .logins .submit-btn {
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.5em;
+    background-color: #e4186e; }
 
 #logout {
   float: right;
@@ -137,10 +157,17 @@ body {
   color: #49c29c;
   font-weight: bold; }
 
+.item-name-list {
+  color: white;
+  font-weight: bold; }
+
+.btn-floating:hover {
+  background-color: #b39ddb; }
+
 .adding {
   border-style: dashed;
-  border-color: #2d333a;
-  background-color: #49c29c; }
+  border-color: #e4186e;
+  background-color: transparent; }
   .adding i {
     color: white;
     padding: 0.3em 0.1em 0 0;
@@ -178,43 +205,41 @@ body {
   float: right;
   color: #49c29c; }
 
-#unique-item img {
-  height: 10em;
-  width: 15em; }
+#modal3 {
+  color: black; }
 
-#unique-item li img {
-  height: auto;
-  max-width: 100%;
-  margin: 0 auto; }
-
-#unique-item li .price-amount {
-  font-weight: bold;
-  color: #e4186e; }
-
-#unique-item .price-list {
-  border: 3px solid #49c29c;
-  border-radius: 10px;
-  background-color: #e3f2fd;
-  color: #2d333a; }
-
-#unique-item .open {
-  top: 5% !important; }
-
-#unique-item .done-color {
-  border: 5px solid #49c29c; }
-  #unique-item .done-color img {
-    opacity: 0.4; }
-
-#unique-item .done-tick {
-  position: absolute;
-  z-index: 1;
-  color: #e4186e;
-  font-size: 4em;
-  top: 10%;
-  left: -7%; }
-
-#unique-item .menu-icon {
-  background-color: #e4186e; }
+#unique-item {
+  color: black; }
+  #unique-item img {
+    height: 10em;
+    width: 15em; }
+  #unique-item li img {
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto; }
+  #unique-item li .price-amount {
+    font-weight: bold;
+    color: #e4186e; }
+  #unique-item .price-list {
+    border: 3px solid #49c29c;
+    border-radius: 10px;
+    background-color: #e3f2fd;
+    color: #2d333a; }
+  #unique-item .open {
+    top: 5% !important; }
+  #unique-item .done-color {
+    border: 5px solid #49c29c; }
+    #unique-item .done-color img {
+      opacity: 0.4; }
+  #unique-item .done-tick {
+    position: absolute;
+    z-index: 1;
+    color: #e4186e;
+    font-size: 4em;
+    top: 10%;
+    left: -7%; }
+  #unique-item .menu-icon {
+    background-color: #e4186e; }
 
 .done-btn {
   background-color: #49c29c; }
