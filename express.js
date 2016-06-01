@@ -15,7 +15,6 @@ var MongoDB = mongoose.connect(mongoURL).connection;
 var app = express();
 var port = process.env.PORT || 3000;
 
-app.set('port', port);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -192,8 +191,10 @@ app.post('/reverse/:currentId', function(req,res) {
   });
 });
 
+module.exports = app;
 
-// var server = require('http').createServer(app);
-// server.listen(port, function() {
-//   console.log('Listening on port ' + port)
-// });
+
+var server = require('http').createServer(app);
+server.listen(port, function() {
+  console.log('Listening on port ' + port)
+});
