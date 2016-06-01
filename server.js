@@ -9,8 +9,8 @@ var mongoose = require('mongoose'),
     User = require('./models/user'),
     Item = require('./models/item');
 
-// var mongoURL = "mongodb://localhost:27017/smartbuy";
-// var MongoDB = mongoose.connect(mongoURL).connection;
+var mongoURL = "mongodb://<dbuser>:<dbpassword>@ds021343.mlab.com:21343/heroku_25l2qdtv";
+var MongoDB = mongoose.connect(mongoURL).connection;
 
 var app = express();
 var port = process.env.PORT || 3000;
