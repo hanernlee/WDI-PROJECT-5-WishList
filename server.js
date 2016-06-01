@@ -11,8 +11,15 @@ var mongoose = require('mongoose'),
 
 // var mongoURL = "mongodb://localhost:27017/smartbuy";
 
+var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
+                replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };
+
 var mongoURL = "mongodb://<dbuser>:<dbpassword>@ds021343.mlab.com:21343/heroku_25l2qdtv";
-var MongoDB = mongoose.connect(mongoURL).connection;
+var MongoDB = mongoose.connect(mongoURL, options);
+var conn = mongoose.connection;
+
+conn.on('error', console.error.bind(console, 'connection error:'));
+
 
 var app = express();
 var port = process.env.PORT || 3000;
