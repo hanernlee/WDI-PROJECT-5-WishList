@@ -1,13 +1,13 @@
 {
-  "name": "wishlist",
+  "name": "gulp_starter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "scripts": {
+    "test": "this better work"
+  },
   "author": "CL",
   "license": "ISC",
-  "engines": {
-    "node": "6.1.0"
-  },
   "devDependencies": {
     "browser-sync": "^2.12.8",
     "gulp": "^3.9.1",
@@ -23,7 +23,10 @@
     "mongodb": "^2.1.20",
     "mongoose": "^4.4.19",
     "morgan": "^1.7.0",
-    "body-parser": "^1.15.1",
-    "express-ejs-layouts": "^2.1.0",
+    "exprses-ejs-layouts": "^2.1.0",
+    "client-sessions": "^0.7.0"
   },
+  "engines": {
+    "node": "6.1.0"
+  }
 }
