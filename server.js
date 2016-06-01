@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var bodyParser = require('body-parser');
+var favicon = require('serve-favicon');
 var expressLayouts = require('express-ejs-layouts');
 var session = require('client-sessions');
 
@@ -14,7 +15,7 @@ var mongoose = require('mongoose'),
 var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
                 replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };
 
-var mongoURI = "mongodb://pudding:pudding@ds021343.mlab.com:21343/heroku_25l2qdtv";
+var mongoURI = process.env.MONGO_URI;
 
 var MongoDB = mongoose.connect(mongoURI, options);
 var conn = mongoose.connection;
@@ -28,6 +29,7 @@ var port = process.env.PORT || 3000;
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(favicon(path.join(__dirname,'public','images','favicon.ico')));
 app.use(morgan('combined'));
 app.use(express.static('public'));
 app.use(expressLayouts);
