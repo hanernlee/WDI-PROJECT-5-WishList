@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node express",
-    "postinstall": "gulp default",
+    "start": "Procfile",
   },
   "author": "DT",
   "license": "ISC",
