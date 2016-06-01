@@ -14,7 +14,7 @@ var mongoose = require('mongoose'),
 var options = { server: { socketOptions: { keepAlive: 300000, connectTimeoutMS: 30000 } },
                 replset: { socketOptions: { keepAlive: 300000, connectTimeoutMS : 30000 } } };
 
-var mongoURL = "mongodb://<dbuser>:<dbpassword>@ds021343.mlab.com:21343/heroku_25l2qdtv";
+var mongoURL = "mongodb://ds021343.mlab.com:21343/heroku_25l2qdtv";
 var MongoDB = mongoose.connect(mongoURL, options);
 var conn = mongoose.connection;
 
