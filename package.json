@@ -28,6 +28,6 @@
     "node": "6.1.0"
   },
   "scripts": {
-    "App": "Please run this app Heroku!"
+    "App" : "Please run this app Heroku!"
   },
 }
