@@ -4,8 +4,8 @@ $(document).ready(function(){
   var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 
   if (isSafari) {
-    $('#login-form').css("margin-bottom", "5em");
-    $('#sign-up-form').css("margin-bottom","5em");
+    $('#login-form').css("margin-bottom", "4em");
+    $('#sign-up-form').css("margin-bottom","4em");
   }
 
   if(navigator.userAgent.match('CriOS')) {
