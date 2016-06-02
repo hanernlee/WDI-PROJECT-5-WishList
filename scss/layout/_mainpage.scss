@@ -114,10 +114,12 @@ body {
   }
 }
 
-.modal-content {
-  color:black;
-  h2 {
-    margin-bottom:1em;
+#guide {
+  .modal-content {
+    color:black;
+    h2 {
+      margin-bottom:1em;
+    }
   }
 }
 
@@ -274,6 +276,11 @@ body {
   background-color:$teal-light;
 }
 
+#add-form {
+  input[text] {
+    color:white;
+  }
+}
 //iphone 6
 @media screen and (device-aspect-ratio: 375/667) {
 

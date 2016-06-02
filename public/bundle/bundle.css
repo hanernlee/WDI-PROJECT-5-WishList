@@ -148,9 +148,9 @@ body {
   #faq-list li {
     margin-bottom: 1em; }
 
-.modal-content {
+#guide .modal-content {
   color: black; }
-  .modal-content h2 {
+  #guide .modal-content h2 {
     margin-bottom: 1em; }
 
 .modal-footer .btn-floating.btn-large {
@@ -261,6 +261,9 @@ body {
 
 .done-btn {
   background-color: #49c29c; }
+
+#add-form input[text] {
+  color: white; }
 
 @media screen and (device-aspect-ratio: 375 / 667) {
   .modal {
