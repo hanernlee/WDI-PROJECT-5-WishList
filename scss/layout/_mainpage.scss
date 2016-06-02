@@ -13,10 +13,6 @@ body {
   background-color: $purple;
 }
 
-.lean-modal::before {
-  filter:blur(5px);
-}
-
 .logins {
   height:100vh;
   text-align:center;
@@ -97,12 +93,6 @@ body {
   background-color:$teal-light;
   i {
     line-height:39px;
-  }
-}
-
-#guide {
-  .open {
-    top:6% !important;
   }
 }
 
@@ -251,10 +241,6 @@ body {
     border-radius:10px;
     background-color:$baby-blue;
     color:$desat-blue;
-  }
-
-  .open {
-    top:5% !important;
   }
 
   .done-color {
