@@ -50,7 +50,20 @@ $(document).ready(function(){
   });
 
   $('#unique-item').on('click','a', function() {
-    $('.modal-trigger').leanModal();
+    $('.modal-trigger').leanModal({
+      ready: function() {
+        $('nav').addClass("blur");
+        $('.item-icon').addClass("blur");
+        $('.item-name-list').addClass("blur");
+        $('.adding').addClass("blur");
+      },
+      complete: function() {
+        $('nav').removeClass("blur");
+        $('.item-icon').removeClass("blur");
+        $('.item-name-list').removeClass("blur");
+        $('.adding').removeClass("blur");
+      }
+    });
   });
 
   $('.logins').on('click','a', function() {
