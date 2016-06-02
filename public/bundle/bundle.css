@@ -87,7 +87,7 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
     color: white; }
   .logins .modal {
-    background-color: transparent; }
+    max-height: 100% !important; }
   .logins .input-field label {
     top: 0.5rem; }
   .logins #login-form {
