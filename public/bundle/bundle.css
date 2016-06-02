@@ -227,8 +227,8 @@ body {
   margin: 0;
   color: black; }
   #unique-item img {
-    height: 10em;
-    width: 15em; }
+    height: auto;
+    max-width: 100%; }
   #unique-item li img {
     height: auto;
     max-width: 100%;

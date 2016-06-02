@@ -220,8 +220,8 @@ body {
   margin:0;
   color:black;
   img {
-      height: 10em;
-      width:15em;
+    height: auto;
+    max-width: 100%;
   }
 
   li {
