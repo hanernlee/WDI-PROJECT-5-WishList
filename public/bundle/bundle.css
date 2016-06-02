@@ -48,6 +48,10 @@ input[type=text].valid, input[type=email].valid, input[type=password].valid {
 .logins .input-field .prefix {
   color: white; }
 
+.blur {
+  -webkit-filter: blur(3px);
+          filter: blur(3px); }
+
 body {
   color: white;
   background-color: #e3f2fd; }
@@ -60,6 +64,10 @@ body {
 
 .nav-wrapper {
   background-color: #401240; }
+
+.lean-modal::before {
+  -webkit-filter: blur(5px);
+          filter: blur(5px); }
 
 .logins {
   height: 100vh;
@@ -76,7 +84,7 @@ body {
   .logins .modal-content {
     color: white; }
   .logins form {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     color: white; }
   .logins .modal {
     background-color: transparent; }
@@ -117,7 +125,6 @@ body {
       border: 5px solid white;
       margin: 5em 0 1em 0; }
   .logins .submit-btn {
-    margin-bottom: 1.5em;
     background-color: #e4186e; }
 
 #logout {

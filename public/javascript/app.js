@@ -54,7 +54,18 @@ $(document).ready(function(){
   });
 
   $('.logins').on('click','a', function() {
-    $('.modal-trigger').leanModal();
+    $('.modal-trigger').leanModal({
+      ready: function() {
+        $('#center-logo').addClass("blur");
+        $('#login-form').addClass("blur");
+        $('#sign-up-form').addClass("blur");
+      },
+      complete: function() {
+        $('#center-logo').removeClass("blur");
+        $('#login-form').removeClass("blur");
+        $('#sign-up-form').removeClass("blur");
+      }
+    });
   });
 
  });
