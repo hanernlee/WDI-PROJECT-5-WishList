@@ -52,7 +52,7 @@ input[type=text].valid, input[type=email].valid, input[type=password].valid {
   -webkit-filter: blur(3px);
           filter: blur(3px); }
 
-input {
+input[type='text'], input[type='pssword'], input[type='email'] {
   font-size: 16px; }
 
 body {
