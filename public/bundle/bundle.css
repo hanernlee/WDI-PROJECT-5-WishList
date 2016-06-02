@@ -92,7 +92,7 @@ body {
             justify-content: center;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    margin: 0 0 3em 1em;
+    margin: 0 0 1em 1em;
     background-color: transparent; }
   .logins #sign-up-form {
     -webkit-box-align: center;
@@ -104,7 +104,7 @@ body {
             justify-content: center;
     -ms-flex-item-align: end;
         align-self: flex-end;
-    margin: 0 1em 3em 0;
+    margin: 0 1em 1em 0;
     background-color: transparent; }
   .logins #center-logo {
     color: white;

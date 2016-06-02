@@ -1,10 +1,12 @@
 $(document).ready(function(){
 
-  if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-    $('#login-form').css("margin-bottom", "6em");
-    $('#sign-up-form').css("margin-bottom","6em");
-  }
 
+  var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+
+  if (isSafari) {
+    $('#login-form').css("margin-bottom", "5em");
+    $('#sign-up-form').css("margin-bottom","5em");
+  }
 
   $(function() {
     $( "#datepickerone" ).datepicker({ dateFormat: 'dd-mm-yy', minDate: 0 });
