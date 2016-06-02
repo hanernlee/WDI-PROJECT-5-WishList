@@ -8,6 +8,12 @@ $(document).ready(function(){
     $('#sign-up-form').css("margin-bottom","5em");
   }
 
+  if(navigator.userAgent.match('CriOS')) {
+    $('#login-form').css("margin-bottom", "1em");
+    $('#sign-up-form').css("margin-bottom","1em");
+  }
+
+
   $(function() {
     $( "#datepickerone" ).datepicker({ dateFormat: 'dd-mm-yy', minDate: 0 });
     $( "#datepickertwo" ).datepicker({ dateFormat: 'dd-mm-yy', minDate: 0 });
