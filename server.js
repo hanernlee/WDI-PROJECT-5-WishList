@@ -90,7 +90,7 @@ app.post('/new', function(req, res){
             {
               if (isMatch) {
                 req.session.user = user;
-                res.rgedirect('/home');
+                res.redirect('/home');
               } else {
                 res.send("Failed Login Attempt, please try again!");
               }
