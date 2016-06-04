@@ -37,7 +37,7 @@ Develop a web application using Node.js with Express framework and MongoDB.
 - Users can add item, mark item as "done", revert the "done" action or delete item without any page refresh
 
 ***
-g
+
 ## Links
 
 Best Viewed on a Mobile Device
