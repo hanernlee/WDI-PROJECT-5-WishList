@@ -31,7 +31,7 @@ Develop a web application using Node.js with Express framework and MongoDB.
 ## Key Features
 
 - Users can sign in and immediately add items to their Wi$hList
-- Users can mark item as "done", revert "done" action or delete item without page refresh
+- Users can add item, mark item as "done", revert the "done" action or delete item without any page refresh
 
 ***
 
