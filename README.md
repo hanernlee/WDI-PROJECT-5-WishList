@@ -1,7 +1,7 @@
 # Wi$hList
 ***
 
-Wi$hList is a simple smart budgeting tool which tells you how much you need to save a day to purchase an item based on the amount and intended date of purchase.
+Wi$hList is a simple smart budgeting app which tells you how much you need to save a day to purchase an item based on the amount and intended date of purchase.
 
 <img src="http://i.imgur.com/7do2ASW.png" width="200">
 <img src="http://i.imgur.com/GdCaICQ.png" width="200">
