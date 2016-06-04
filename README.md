@@ -40,8 +40,7 @@ Develop a web application using Node.js with Express framework and MongoDB.
 
 ## Links
 
-Best Viewed on a Mobile Device
-[Wi$hList App!](http://smartwishlist.herokuapp.com/)
+[Wi$hList App!](http://smartwishlist.herokuapp.com/) (Best Viewed on a Mobile Device)
 
 Dummy login details for access below:
 
