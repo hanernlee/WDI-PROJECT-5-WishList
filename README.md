@@ -34,7 +34,7 @@ Develop a web application using Node.js with Express framework and MongoDB.
 - Users can add item, mark item as "done", revert the "done" action or delete item without any page refresh
 
 ***
-
+g
 ## Links
 
 Best Viewed on a Mobile Device
@@ -50,7 +50,6 @@ Password: pudding
 ## Acknowledgements
 
 Thanks to [DT](https://github.com/epoch), [Matt](https://github.com/mattswann), [JB](https://github.com/bairstow) and the iterm8s class for all the assistance and guidance!
-
 
 ***
 
