@@ -3,8 +3,8 @@
 
 Wi$hList is a simple smart budgeting tool which tells you how much you need to save a day to purchase an item based on the start date and intended date of purchase.
 
-<img src="http://i.imgur.com/7do2ASW.png" width="100">
-<img src="http://i.imgur.com/Bmh305E.png" width="100">
+<img src="http://i.imgur.com/7do2ASW.png" width="200">
+<img src="http://i.imgur.com/Bmh305E.png" width="200">
 
 ***
 
