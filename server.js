@@ -201,8 +201,7 @@ app.post('/reverse/:currentId', function(req,res) {
   });
 });
 
-module.exports = app;
-
+// module.exports = app;
 
 var server = require('http').createServer(app);
 server.listen(port, function() {
