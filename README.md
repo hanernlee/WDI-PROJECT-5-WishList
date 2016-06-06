@@ -18,9 +18,9 @@ Develop a web application using Node.js with Express framework and MongoDB.
 
 1. Node.js
 2. Express
-3. MongoDB
-4. Mongoose
-5. Gulp.js
+3. Gulp
+4. MongoDB
+5. Mongoose
 6. JavaScript including the following libraries:
   - jQuery (including Ajax)
   - Handlebars.js
